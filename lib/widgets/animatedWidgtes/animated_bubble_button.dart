@@ -14,7 +14,7 @@ class AnimatedBubbleButton extends StatefulWidget {
     this.startBorderRadius = const BorderRadius.all(Radius.circular(80.0)),
     this.endBorderRadius,
     this.curve = Curves.easeIn,
-    this.color = AppColors.black,
+    this.color = AppColors.grey800,
     this.imageColor = AppColors.accentColor,
     this.offsetAnimation,
     this.duration = const Duration(milliseconds: 300),
@@ -149,7 +149,7 @@ class _AnimatedBubbleButtonState extends State<AnimatedBubbleButton>
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SelectableText(
+                            Text(
                               widget.title,
                               textAlign: TextAlign.center,
                               style: widget.titleStyle ?? buttonStyle,

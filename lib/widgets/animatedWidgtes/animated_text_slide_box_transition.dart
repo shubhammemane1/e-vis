@@ -1,7 +1,9 @@
+// ignore_for_file: library_private_types_in_public_api
+
 part of animation;
 
 class AnimatedTextSlideBoxTransition extends StatefulWidget {
-   const AnimatedTextSlideBoxTransition({
+  const AnimatedTextSlideBoxTransition({
     Key? key,
     required this.controller,
     required this.text,
@@ -15,7 +17,7 @@ class AnimatedTextSlideBoxTransition extends StatefulWidget {
     this.position,
     this.textAlign,
     this.boxColor = AppColors.black,
-    this.coverColor = AppColors.grey100,
+    this.coverColor = AppColors.white,
     this.visibleAnimationcurve = Curves.fastOutSlowIn,
     this.invisibleAnimationcurve = Curves.fastOutSlowIn,
     this.slideAnimationcurve = Curves.fastOutSlowIn,
@@ -118,7 +120,6 @@ class _AnimatedTextSlideBoxTransitionState
 
     return Container(
       height: textHeight,
-      width: textWidth,
       child: Stack(
         children: [
           AnimatedSlideBox(

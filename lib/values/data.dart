@@ -1,11 +1,14 @@
 // ignore_for_file: non_constant_identifier_names
 
 part of values;
+
 class Data {
   static List<NavItemData> menuItems = [
     NavItemData(name: StringConst.HOME, route: StringConst.HOME_PAGE),
     NavItemData(name: StringConst.ABOUT, route: StringConst.ABOUT_PAGE),
-    NavItemData(name: StringConst.WORKS, route: StringConst.WORKS_PAGE),
+    NavItemData(
+        name: StringConst.CONTACT_US, route: StringConst.CONTACT_US_PAGE),
+    NavItemData(name: StringConst.NEWS, route: StringConst.NEWS_PAGE),
     // NavItemData(
     //   name: StringConst.EXPERIENCE,
     //   route: StringConst.EXPERIENCE_PAGE,
@@ -27,7 +30,6 @@ class Data {
     // Projects.NIMBUS,
   ];
 }
-
 
 class Projects {
   static ProjectItemData INSPECT_ASSIST = ProjectItemData(
@@ -104,7 +106,4 @@ class Projects {
     technologyUsed: "",
     playStoreUrl: StringConst.PERMA_ASSIST_PLAYSTORE_URL,
   );
-
-
 }
-

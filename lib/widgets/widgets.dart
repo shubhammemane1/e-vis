@@ -1,6 +1,7 @@
 library widgets;
 
 
+import 'package:evis/pages/contactus/contactUs_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -25,3 +26,5 @@ part 'animated_footer.dart';
 part 'simple_footer.dart';
 part 'content_area.dart';
 part 'content_builder.dart';
+part 'custom_textField.dart';
+part 'page_header.dart';

@@ -14,14 +14,18 @@ class StringConst {
   //pages
   static const String HOME = "Home";
   static const String ABOUT = "About";
-  static const String ABOUT_US = "About US";
+  static const String ABOUT_US = "About us";
+  static const String CONTACT_US = "Contact us";
   static const String WORKS = "Works";
+  static const String NEWS = "News";
 
   //routes
   static const String LOADING_PAGE = "/";
   static const String HOME_PAGE = "/home";
   static const String ABOUT_PAGE = "/about";
   static const String WORKS_PAGE = "/works";
+  static const String CONTACT_US_PAGE = "/contact";
+  static const String NEWS_PAGE = "/news";
   // static const String CONTACT_PAGE = "/contact";
   // static const String PROJECT_PAGE = "/project";
   // static const String PROJECT_DETAIL_PAGE = "/project-detail";
@@ -36,6 +40,7 @@ class StringConst {
   static const String ORG_NAME = "E-VIS";
   static const String ORG_INTRO = "We are Cloud Based";
   static const String ORG_DESC = "Continually Being Innovative";
+  static const String GET_IN_TOUCH = "Get In Touch";
   static const String ORG_TITLE = "SAAS Solution Experts ";
   static const String ORG_PROJ = "InspectAssist / PermAssist / GreenLight";
   static const String SEE_OUR_PRODUCTS = "See our Products";
@@ -52,7 +57,19 @@ class StringConst {
 // About Page
   static const String ABOUT_ORG_CATCH_LINE_1 =
       "Driving Digital Transformation In Local Government";
-  static const String SUB_TEXT_PREFIX ="-   ";
+  static const String SUB_TEXT_PREFIX = "-   ";
+
+// Contact Page
+  static const String CONTACT_DETAILS = "CONTACT DETAILS";
+  static const String ADDRESS = "Address";
+  static const String ORG_ADDRESS = "Suite 101, 181 St Kilda Road St Kilda, VIC 3182 Australia";
+  static const String ORG_PHONE = "+61 3 9534 3228";
+  static const String ORG_EMAIL = "info@e-vis.com.au";
+  static const String NAME = "Name";
+  static const String PHONE = "Phone";
+  static const String EMAIL = "Email";
+  static const String EMAIL_GENERAL = "EMAIL: GENERAL MESSAGE";
+  static const String MESSAGE = "Message";
 
   //Who Are WE
   static const String WHO_ARE_WE_TITLE = "Who Are We?";

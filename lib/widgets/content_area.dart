@@ -9,8 +9,7 @@ class ContentArea extends StatelessWidget {
   final BorderRadius borderRadius;
   final Widget? child;
 
-  ContentArea({
-    Key? key,
+  const ContentArea({super.key, 
     this.width,
     this.height,
     this.backgroundColor,

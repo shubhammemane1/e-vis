@@ -1,7 +1,8 @@
-
+import 'package:evis/pages/contactus/contactUs_page.dart';
+import 'package:evis/pages/news/news_page.dart';
 import 'package:flutter/material.dart';
 
-import '../pages/home/about/about_page.dart';
+import '../pages/about/about_page.dart';
 import '../pages/home/home_page.dart';
 
 typedef PathWidgetBuilder = Widget Function(
@@ -18,13 +19,17 @@ class Path {
 
 class RouteConfiguration {
   static List<Path> paths = [
-    // Path(
-    //   r'^' + ContactPage.contactPageRoute,
-    //       (context, matches) => const ContactPage(),
-    // ),
+    Path(
+      r'^' + ContactUsPage.contactPageRoute,
+      (context, matches) => const ContactUsPage(),
+    ),
     Path(
       r'^' + AboutPage.aboutPageRoute,
-          (context, matches) => const AboutPage(),
+      (context, matches) => const AboutPage(),
+    ),
+    Path(
+      r'^' + NewsPage.newsPageRoute,
+      (context, matches) => const NewsPage(),
     ),
     // Path(
     //   r'^' + WorksPage.worksPageRoute,
@@ -44,9 +49,8 @@ class RouteConfiguration {
     // ),
     Path(
       r'^' + HomePage.homePageRoute,
-          (context, matches) =>  const HomePage(),
+      (context, matches) => const HomePage(),
     ),
-
   ];
 
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
@@ -65,10 +69,10 @@ class RouteConfiguration {
     return null;
   }
 
-/// The route generator callback used when the app is navigated to a named
-/// route. Set it on the [MaterialApp.onGenerateRoute] or
-/// [WidgetsApp.onGenerateRoute] to make use of the [paths] for route
-/// matching.
+  /// The route generator callback used when the app is navigated to a named
+  /// route. Set it on the [MaterialApp.onGenerateRoute] or
+  /// [WidgetsApp.onGenerateRoute] to make use of the [paths] for route
+  /// matching.
 //  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
 //    for (final path in paths) {
 //      final regExpPattern = RegExp(path.pattern);
@@ -106,11 +110,11 @@ class NoAnimationMaterialPageRoute<T> extends MaterialPageRoute<T> {
 
   @override
   Widget buildTransitions(
-      BuildContext context,
-      Animation<double> animation,
-      Animation<double> secondaryAnimation,
-      Widget child,
-      ) {
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
     return child;
   }
 }

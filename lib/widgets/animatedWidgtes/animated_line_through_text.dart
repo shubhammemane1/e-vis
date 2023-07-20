@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 part of animation;
 
 class AnimatedLineThroughText extends StatefulWidget {
@@ -166,7 +168,7 @@ class _AnimatedLineThroughTextState extends State<AnimatedLineThroughText>
                                   : TextDecoration.none,
                             ),
                     )
-                  : Empty(),
+                  : const Empty(),
               Positioned(
                 top: (textHeight / 2) - widget.lineThickness,
                 child: Container(
@@ -184,7 +186,7 @@ class _AnimatedLineThroughTextState extends State<AnimatedLineThroughText>
                 ),
               ),
               widget.hasSlideBoxAnimation
-                  ? Empty()
+                  ? const Empty()
                   : Text(
                       widget.text,
                       style: _isHovering

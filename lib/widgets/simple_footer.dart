@@ -25,7 +25,7 @@ class SimpleFooter extends StatelessWidget {
               return const Column(
                 children: [
                   Spacer(flex: 2),
-                  SimpleFooterSm(),
+                  // SimpleFooterSm(),
                   Spacer(),
                 ],
               );
@@ -33,7 +33,7 @@ class SimpleFooter extends StatelessWidget {
               return const Column(
                 children: [
                   Spacer(),
-                  SimpleFooterLg(),
+                  // SimpleFooterLg(),
                   SpaceH20(),
                 ],
               );
@@ -58,7 +58,7 @@ class SimpleFooterSm extends StatelessWidget {
     return Column(
       children: [
         // Socials(socialData: Data.socialData),
-        const SpaceH30(),
+        // const SpaceH30(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -89,8 +89,8 @@ class SimpleFooterSm extends StatelessWidget {
             // ),
           ],
         ),
-        const SpaceH8(),
-        const BuiltWithFlutter(),
+        // const SpaceH8(),
+        // const BuiltWithFlutter(),
       ],
     );
   }
@@ -114,7 +114,7 @@ class SimpleFooterLg extends StatelessWidget {
             // Socials(socialData: Data.socialData),
           ],
         ),
-        const SpaceH20(),
+        // const SpaceH20(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

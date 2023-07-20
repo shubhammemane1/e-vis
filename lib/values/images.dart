@@ -17,7 +17,11 @@ class ImagePath{
 
 
   static const String INSPECT_ASSIST = "$projDir/inspectAssist/ia_cover.png";
-  static const String PERMA_ASSIST = "$projDir/inspectAssist/gl_cover.jpg";
-  static const String GREEN_LIGHT = "$projDir/inspectAssist/gl_cover.jpg";
+  static const String PERMA_ASSIST = "$projDir/permaAssist/pa_cover.png";
+  static const String GREEN_LIGHT = "$projDir/greenLight/gl_cover.jpg";
+
+
+
+  static const String WAVE_CIRCLE = "$imageDir/works.png";
 
 }

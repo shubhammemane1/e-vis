@@ -120,20 +120,20 @@ class _AnimatedFooterState extends State<AnimatedFooter>
               text: StringConst.ABOUT_US_DESC,
               textAlign: TextAlign.center,
               textStyle: subtitleStyle,
-              factor: 2.0,
+              factor: 4.0,
               controller: CurvedAnimation(
                 parent: controller,
                 curve: Curves.fastOutSlowIn,
               ),
             ),
             const SpaceH40(),
-            // AnimatedBubbleButton(
-            //   title: StringConst.ORG_TITLE.toUpperCase(),
-            //   onTap: () {
-            //     // Navigator.pushNamed(context, ContactPage.contactPageRoute);
-            //   },
-            // ),
-            const Spacer(flex: 3),
+            AnimatedBubbleButton(
+              title: StringConst.GET_IN_TOUCH,
+              onTap: () {
+                Navigator.pushNamed(context, ContactUsPage.contactPageRoute);
+              },
+            ),
+            // const Spacer(flex: 3),
             // AnimatedPositionedText(
             //   text: StringConst.COPYRIGHT,
             //   textAlign: TextAlign.center,
@@ -144,7 +144,7 @@ class _AnimatedFooterState extends State<AnimatedFooter>
             //     curve: Curves.fastOutSlowIn,
             //   ),
             // ),
-            const Spacer(flex: 3),
+            const Spacer(flex: 2),
             ResponsiveBuilder(
               builder: (context, sizingInformation) {
                 double screenWidth = sizingInformation.screenSize.width;
@@ -152,14 +152,12 @@ class _AnimatedFooterState extends State<AnimatedFooter>
                   return const Column(
                     children: [
                       SimpleFooterSm(),
-                      SpaceH8(),
                     ],
                   );
                 } else {
                   return const Column(
                     children: [
                       SimpleFooterLg(),
-                      SpaceH8(),
                     ],
                   );
                 }
@@ -172,4 +170,5 @@ class _AnimatedFooterState extends State<AnimatedFooter>
     );
   }
 }
+
 

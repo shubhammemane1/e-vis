@@ -21,17 +21,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
   GlobalKey key = GlobalKey();
   late AnimationController _slideTextController;
+  late AnimationController _controller;
   late AnimationController _recentWorksController;
 
   @override
   void initState() {
     // _arguments = NavigationArguments();
-    // _viewProjectsController = AnimationController(
-    //   vsync: this,
-    //   duration: Duration(milliseconds: 300),
-    // );
-    _slideTextController = AnimationController(
+    _controller = AnimationController(
       vsync: this,
+      duration: Animations.slideAnimationDurationShort,
+    );
+    _slideTextController = AnimationController(
+      vsync: this,  
       duration: Animations.slideAnimationDurationLong,
     );
     _recentWorksController = AnimationController(
@@ -45,6 +46,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
   @override
   void dispose() {
     super.dispose();
+    _controller.dispose();
     _slideTextController.dispose();
     _recentWorksController.dispose();
   }
@@ -66,7 +68,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin{
     return PageWrapper(
         selectedRoute: HomePage.homePageRoute,
         selectedPageName: StringConst.HOME_PAGE,
-        navBarAnimationController: _slideTextController,
+        navBarAnimationController: _controller,
+        onLoadingAnimationDone: () {
+          _controller.forward();
+        },
         child: ListView(
           children: [
             HomePageHeader(

@@ -31,7 +31,7 @@ class ContentBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? defaultNumberStyle = textTheme.bodyText1?.copyWith(
+    TextStyle? defaultNumberStyle = textTheme.bodyLarge?.copyWith(
       fontSize: Sizes.TEXT_SIZE_10,
       color: AppColors.black,
       fontWeight: FontWeight.w400,
@@ -41,7 +41,7 @@ class ContentBuilder extends StatelessWidget {
     TextStyle? defaultSectionStyle = defaultNumberStyle?.copyWith(
       color: AppColors.grey600,
     );
-    TextStyle? defaultTitleStyle = textTheme.subtitle1?.copyWith(
+    TextStyle? defaultTitleStyle = textTheme.titleMedium?.copyWith(
       color: AppColors.black,
       fontSize: responsiveSize(
         context,
@@ -49,51 +49,49 @@ class ContentBuilder extends StatelessWidget {
         Sizes.TEXT_SIZE_20,
       ),
     );
-    return Container(
+    return SizedBox(
       width: width,
       child: ResponsiveBuilder(
         builder: (context, sizingInformation) {
           double screenWidth = sizingInformation.screenSize.width;
 
-          if (screenWidth <= RefinedBreakpoints().tabletNormal) {
-            return Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      AnimatedTextSlideBoxTransition(
-                        controller: controller,
-                        text: number,
-                        textStyle: numberStyle ?? defaultNumberStyle,
-                        // boxColor: AppColors.transperent,
-                        // coverColor: AppColors.transperent,
-                      ),
-                      SpaceW8(),
-                      AnimatedTextSlideBoxTransition(
-                        controller: controller,
-                        text: section,
-                        textStyle: sectionStyle ?? defaultSectionStyle,
-                        // boxColor: AppColors.transperent,
-                        // coverColor: AppColors.transperent,
-                      ),
-                    ],
-                  ),
-                  SpaceH16(),
-                  heading ??
-                      AnimatedTextSlideBoxTransition(
-                        controller: controller,
-                        text: title!,
-                        textStyle: titleStyle ?? defaultTitleStyle,
-                        boxColor: AppColors.transperent,
-                        coverColor: AppColors.transperent,
-                      ),
-                  SpaceH30(),
-                  body,
-                  footer ?? Empty(),
-                ],
-              ),
+          if (screenWidth <= const RefinedBreakpoints().tabletNormal) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    AnimatedTextSlideBoxTransition(
+                      controller: controller,
+                      text: number,
+                      textStyle: numberStyle ?? defaultNumberStyle,
+                      // boxColor: AppColors.transperent,
+                      // coverColor: AppColors.transperent,
+                    ),
+                    const SpaceW8(),
+                    AnimatedTextSlideBoxTransition(
+                      controller: controller,
+                      text: section,
+                      textStyle: sectionStyle ?? defaultSectionStyle,
+                      // boxColor: AppColors.transperent,
+                      // coverColor: AppColors.transperent,
+                    ),
+                  ],
+                ),
+                const SpaceH16(),
+                heading ??
+                    AnimatedTextSlideBoxTransition(
+                      controller: controller,
+                      text: title!,
+                      textStyle: titleStyle ?? defaultTitleStyle,
+                      boxColor: AppColors.transperent,
+                      coverColor: AppColors.transperent,
+                    ),
+                const SpaceH30(),
+                body,
+                footer ?? const Empty(),
+              ],
             );
           } else {
             return Row(
@@ -111,7 +109,7 @@ class ContentBuilder extends StatelessWidget {
                         // boxColor: AppColors.transperent,
                         // coverColor: AppColors.transperent,
                       ),
-                      SpaceW16(),
+                      const SpaceW16(),
                       Expanded(
                         child:  AnimatedTextSlideBoxTransition(
                         controller: controller,
@@ -124,8 +122,8 @@ class ContentBuilder extends StatelessWidget {
                     ],
                   ),
                 ),
-                SpaceW40(),
-                Container(
+                const SpaceW40(),
+                SizedBox(
                   width: width * 0.80,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,9 +136,9 @@ class ContentBuilder extends StatelessWidget {
                         boxColor: AppColors.transperent,
                         coverColor: AppColors.transperent,
                       ),
-                      SpaceH20(),
+                      const SpaceH20(),
                       body,
-                      footer ?? Empty(),
+                      footer ?? const Empty(),
                     ],
                   ),
                 )
